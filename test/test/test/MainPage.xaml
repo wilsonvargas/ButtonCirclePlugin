@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             x:Class="test.MainPage">
+
+    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <local:CircleButton Icon="ic_directions_bike" FontSize="30" TextColor="Black" HeightRequest="70" WidthRequest="70" BorderThickness="5" BorderColor="Black" BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked"/>
+        <local:CircleButton Icon="ic_plus_one" FontSize="30" TextColor="White" HeightRequest="70" WidthRequest="70" BorderColor="Black" BackgroundColor="#99E758" Clicked="CircleButton_Clicked"/>
+        <local:CircleButton Icon="ic_add" FontSize="30" TextColor="Black" HeightRequest="70" WidthRequest="70" BorderColor="Black" BorderThickness="5" BackgroundColor="Transparent" Clicked="CircleButton_Clicked"/>
+    </StackLayout>
+    
+</ContentPage>
