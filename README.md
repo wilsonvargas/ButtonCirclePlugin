@@ -7,7 +7,8 @@ Simple but elegant way of display circle buttons with an icon in your Xamarin.Fo
 * Install into your PCL project and Client projects.
 * 
 
-###Android
+### Android
+
 In your Android project call:
 
 ```
@@ -16,7 +17,8 @@ ButtonCircleRenderer.Init();
 ![android](http://l7c.us/descargas/images/android.png)
 
 
-###iOS
+### iOS
+
 In your iOS project call:
 
 ```
