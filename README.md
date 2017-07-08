@@ -7,12 +7,16 @@ Simple but elegant way of display circle buttons with an icon in your Xamarin.Fo
 * Install into your PCL project and Client projects.
 * 
 
+###Android
 In your Android project call:
 
 ```
 ButtonCircleRenderer.Init();
 ```
+![android](http://l7c.us/descargas/images/android.png)
 
+
+###iOS
 In your iOS project call:
 
 ```
@@ -27,6 +31,7 @@ And add this key in your Info.plist
       <string>MaterialIcons-Regular.ttf</string>
     </array>
 ```
+![ios](http://l7c.us/descargas/images/ios.PNG)
 
 You must do this AFTER you call Xamarin.Forms.Init();
 
