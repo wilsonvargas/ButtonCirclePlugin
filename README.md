@@ -5,7 +5,6 @@ Simple but elegant way of display circle buttons with an icon in your Xamarin.Fo
 #### Setup
 * Available on NuGet: https://www.nuget.org/packages/Plugins.Forms.ButtonCircle [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
 * Install into your PCL project and Client projects.
-* 
 
 ### Android
 
