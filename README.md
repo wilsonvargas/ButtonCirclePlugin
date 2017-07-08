@@ -1,4 +1,4 @@
-# Button Control Plugin for Xamarin.Forms
+# Button Circle Control Plugin for Xamarin.Forms
 
 Simple but elegant way of display circle buttons with an icon in your Xamarin.Forms projects. This project is based in [ImageCirclePlugin Project](https://github.com/jamesmontemagno/ImageCirclePlugin) developed by [James Montemagno](https://twitter.com/jamesmontemagno)
 
