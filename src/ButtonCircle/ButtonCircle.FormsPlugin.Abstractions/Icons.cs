@@ -7,6 +7,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions
     [TypeConverter(typeof(IconsConverter))]
     public class Icons
     {
+        public static readonly Icons ic_default = new Icons("");
         public static readonly Icons ic_3d_rotation = new Icons("\ue84d");
         public static readonly Icons ic_ac_unit = new Icons("\ueb3b");
         public static readonly Icons ic_access_alarm = new Icons("\ue190");

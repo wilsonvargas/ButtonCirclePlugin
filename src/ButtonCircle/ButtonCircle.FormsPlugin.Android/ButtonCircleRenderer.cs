@@ -47,15 +47,15 @@ namespace ButtonCircle.FormsPlugin.Droid
                 }
             }
 
-            if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
-            {
-                Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
-				Element.Text = ((CircleButton)Element).Text;
-            }
-            else
+            if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
                 Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
                 Element.Text = ((CircleButton)Element).Icon;
+            }
+            else
+            {
+                Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
+                Element.Text = ((CircleButton)Element).Text;                
             }
         }
 
@@ -68,16 +68,17 @@ namespace ButtonCircle.FormsPlugin.Droid
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
               e.PropertyName == CircleButton.TextProperty.PropertyName)
             {
-				if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
-				{
-					Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
-					Element.Text = ((CircleButton)Element).Text;
-				}
-				else
-				{
-					Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
-					Element.Text = ((CircleButton)Element).Icon;
-				}
+                if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
+                {
+                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
+                    Element.Text = ((CircleButton)Element).Icon;
+                }
+                else
+                {
+                    Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
+                    Element.Text = ((CircleButton)Element).Text;
+                }
+
                 this.Invalidate();
             }
         }

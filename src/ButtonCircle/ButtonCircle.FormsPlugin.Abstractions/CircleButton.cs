@@ -52,7 +52,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         BindableProperty.Create(propertyName: nameof(BorderColor),
               returnType: typeof(Icons),
               declaringType: typeof(CircleButton),
-              defaultValue: Icons.ic_check);
+              defaultValue: Icons.ic_default);
 
         /// <summary>
         /// Gets or sets the icon.

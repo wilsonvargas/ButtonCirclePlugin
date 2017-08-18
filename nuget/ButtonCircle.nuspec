@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="2.8.1">
     <id>Plugins.Forms.ButtonCircle</id>
-    <version>1.0.36</version>
+    <version>1.0.78</version>
     <title>Button Circle Control Plugin for Xamarin.Forms</title>
     <authors>Wilson Vargas</authors>
     <owners>Wilson Vargas</owners>
@@ -18,7 +18,7 @@
 </description>
 <copyright>Copyright ©2017</copyright>
     <summary>Use a Circle Button Icon in your Xamarin.Forms projects! Ensure you call ButtonCircleRenderer.Init() on each platform!</summary>
-<tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios</tags>
+<tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios, rounded-button, circular button, circle button, icon</tags>
     <dependencies>
          <dependency id="Xamarin.Forms" version="2.3.4.224" />
     </dependencies>

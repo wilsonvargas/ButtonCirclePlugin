@@ -38,14 +38,15 @@ namespace ButtonCircle.FormsPlugin.iOS
 
             CreateCircle();
             
-            if(!String.IsNullOrEmpty(((CircleButton)Element).Text))
+            if(!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
-				Element.Text = ((CircleButton)Element).Text;
-            }
-            else {
                 Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 Element.Text = ((CircleButton)Element).Icon;
+                
+            }
+            else {
+                Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                Element.Text = ((CircleButton)Element).Text;
             }
         }
         /// <summary>
@@ -67,14 +68,16 @@ namespace ButtonCircle.FormsPlugin.iOS
             {
                 CreateCircle();
                
-                if(!String.IsNullOrEmpty(((CircleButton)Element).Text))
+                if(!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                	Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
-                	Element.Text = ((CircleButton)Element).Text;
-                }
-                else {
                     Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                     Element.Text = ((CircleButton)Element).Icon;
+
+                }
+                else
+                {
+                    Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                    Element.Text = ((CircleButton)Element).Text;
                 }
             }
         }
