@@ -46,8 +46,17 @@ namespace ButtonCircle.FormsPlugin.Droid
                     SetLayerType(LayerType.Software, null);
                 }
             }
-            Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
-            Element.Text = ((CircleButton)Element).Icon;
+
+            if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
+            {
+                Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
+				Element.Text = ((CircleButton)Element).Text;
+            }
+            else
+            {
+                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
+                Element.Text = ((CircleButton)Element).Icon;
+            }
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -56,9 +65,19 @@ namespace ButtonCircle.FormsPlugin.Droid
 
             if (e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
-              e.PropertyName == CircleButton.IconProperty.PropertyName)
+              e.PropertyName == CircleButton.IconProperty.PropertyName ||
+              e.PropertyName == CircleButton.TextProperty.PropertyName)
             {
-                Element.Text = ((CircleButton)Element).Icon;
+				if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
+				{
+					Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
+					Element.Text = ((CircleButton)Element).Text;
+				}
+				else
+				{
+					Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
+					Element.Text = ((CircleButton)Element).Icon;
+				}
                 this.Invalidate();
             }
         }

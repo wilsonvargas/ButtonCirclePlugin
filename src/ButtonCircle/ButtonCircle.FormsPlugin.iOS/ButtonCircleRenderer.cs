@@ -37,8 +37,16 @@ namespace ButtonCircle.FormsPlugin.iOS
                 throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icons))); ;
 
             CreateCircle();
-            Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
-            Element.Text = ((CircleButton)Element).Icon;
+            
+            if(!String.IsNullOrEmpty(((CircleButton)Element).Text))
+            {
+                Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+				Element.Text = ((CircleButton)Element).Text;
+            }
+            else {
+                Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                Element.Text = ((CircleButton)Element).Icon;
+            }
         }
         /// <summary>
         /// 
@@ -54,11 +62,20 @@ namespace ButtonCircle.FormsPlugin.iOS
                 e.PropertyName == VisualElement.WidthProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
-              e.PropertyName == CircleButton.IconProperty.PropertyName)
+              e.PropertyName == CircleButton.IconProperty.PropertyName ||
+              e.PropertyName == CircleButton.TextProperty.PropertyName)
             {
                 CreateCircle();
                
-                Element.Text = ((CircleButton)Element).Icon;
+                if(!String.IsNullOrEmpty(((CircleButton)Element).Text))
+                {
+                	Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                	Element.Text = ((CircleButton)Element).Text;
+                }
+                else {
+                    Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                    Element.Text = ((CircleButton)Element).Icon;
+                }
             }
         }
 
