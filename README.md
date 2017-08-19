@@ -48,6 +48,9 @@ You must do this AFTER you call Xamarin.Forms.Init();
 |Windows 10 UWP|Is coming|
 |Xamarin.Mac|No||
 
+#### List of icons
+You can see name of icons [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Icons.cs)
+
 #### Usage
 Instead of using an Button simply use a CircleButton instead!
 
