@@ -13,8 +13,9 @@ In your Android project call:
 ```
 ButtonCircleRenderer.Init();
 ```
-![android](http://l7c.us/descargas/images/android.png =200x400)
-
+<img src="http://l7c.us/descargas/images/android.png" 
+data-canonical-src="http://l7c.us/descargas/images/android.png"
+ width="200" height="400" />
 
 ### iOS
 
