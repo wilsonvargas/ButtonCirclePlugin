@@ -13,7 +13,7 @@ In your Android project call:
 ```
 ButtonCircleRenderer.Init();
 ```
-![android](http://l7c.us/descargas/images/android.png=200x400)
+![android](http://l7c.us/descargas/images/android.png =200x400)
 
 
 ### iOS
