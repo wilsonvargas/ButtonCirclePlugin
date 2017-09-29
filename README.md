@@ -36,22 +36,6 @@ And add this key in your Info.plist
     </array>
 ```
 
-
-#### Setup
-* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
-* Install into your PCL project and Client projects.
-
-### Android
-
-In your Android project call:
-
-```
-ButtonCircleRenderer.Init();
-```
-<img src="http://l7c.us/descargas/images/ios.PNG" 
-data-canonical-src="http://l7c.us/descargas/images/ios.PNG"
- width="250" height="480" />
-
 You must do this AFTER you call Xamarin.Forms.Init();
 
 **Platform Support**
