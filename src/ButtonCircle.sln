@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.Abstractions", "ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\ButtonCircle.FormsPlugin.Abstractions.csproj", "{14C534B6-1984-41A9-A384-D3A5508588E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.iOS", "ButtonCircle\ButtonCircle.FormsPlugin.iOS\ButtonCircle.FormsPlugin.iOS.csproj", "{D525F236-6A2D-4010-B1CC-4A4B8581C90B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.Android", "ButtonCircle\ButtonCircle.FormsPlugin.Android\ButtonCircle.FormsPlugin.Android.csproj", "{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.UWP", "ButtonCircle\ButtonCircle.FormsPlugin.UWP\ButtonCircle.FormsPlugin.UWP.csproj", "{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,8 +71,27 @@ Global
 		{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}.Release|x64.Build.0 = Release|Any CPU
 		{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD2D2DB4-E781-4CF1-9B62-3AAD264F196D}.Release|x86.Build.0 = Release|Any CPU
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|ARM.Build.0 = Debug|ARM
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|x64.ActiveCfg = Debug|x64
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|x64.Build.0 = Debug|x64
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|x86.ActiveCfg = Debug|x86
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Debug|x86.Build.0 = Debug|x86
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|ARM.ActiveCfg = Release|ARM
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|ARM.Build.0 = Release|ARM
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x64.ActiveCfg = Release|x64
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x64.Build.0 = Release|x64
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x86.ActiveCfg = Release|x86
+		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {477E7362-D9D9-4214-855A-688D88BC06EC}
 	EndGlobalSection
 EndGlobal

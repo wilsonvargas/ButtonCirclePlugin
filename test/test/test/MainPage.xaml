@@ -5,8 +5,19 @@
              x:Class="test.MainPage">
 
     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-        <local:CircleButton Text="vf" FontSize="30" TextColor="Black" HeightRequest="70" BorderRadius="70" WidthRequest="70" BorderThickness="5" BorderColor="Black" BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked"/>
-        <local:CircleButton Icon="ic_plus_one" FontSize="30" TextColor="White" HeightRequest="70" BorderRadius="70" WidthRequest="70" BorderColor="Black" BackgroundColor="#99E758" Clicked="CircleButton_Clicked"/>
-        <local:CircleButton Icon="ic_add_alert" FontSize="30" TextColor="Black" HeightRequest="70" BorderRadius="70" WidthRequest="70" BorderColor="Black" BorderThickness="5" BackgroundColor="White" Clicked="CircleButton_Clicked"/>
+        <!--<local:CircleButton Text="WM" FontSize="Medium" TextColor="Black" 
+                            HeightRequest="70" BorderRadius="40" WidthRequest="70" RotationX="360" RotationY="2000" 
+                            BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked"/>-->
+        <!--<local:CircleButton Icon="ic_plus_one" FontSize="30" TextColor="White"
+                            IsEnabled="False"
+                            HeightRequest="70" BorderRadius="70" WidthRequest="70" 
+                            BorderColor="Black" BackgroundColor="#99E758" Clicked="CircleButton_Clicked"/>
+        <local:CircleButton Icon="ic_add_alert" FontSize="30" TextColor="Black" 
+                            IsEnabled="False"
+                            HeightRequest="70" BorderRadius="70" WidthRequest="70" 
+                            BorderColor="Black" BorderThickness="5" BackgroundColor="White" Clicked="CircleButton_Clicked"/>
+        <local:CircleButton Image="icon.png" FontSize="30" TextColor="Black" 
+                            HeightRequest="70" BorderRadius="70" WidthRequest="70" 
+                            BackgroundColor="#329AD9" Clicked="CircleButton_Clicked"/>-->
     </StackLayout>
 </ContentPage>

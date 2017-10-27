@@ -37,14 +37,15 @@ namespace ButtonCircle.FormsPlugin.iOS
                 throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icons))); ;
 
             CreateCircle();
-            
-            if(!String.IsNullOrEmpty(((CircleButton)Element).Icon))
+
+            if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
                 Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 Element.Text = ((CircleButton)Element).Icon;
-                
+
             }
-            else {
+            else
+            {
                 Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 Element.Text = ((CircleButton)Element).Text;
             }
@@ -67,12 +68,11 @@ namespace ButtonCircle.FormsPlugin.iOS
               e.PropertyName == CircleButton.TextProperty.PropertyName)
             {
                 CreateCircle();
-               
-                if(!String.IsNullOrEmpty(((CircleButton)Element).Icon))
+
+                if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
                     Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                     Element.Text = ((CircleButton)Element).Icon;
-
                 }
                 else
                 {

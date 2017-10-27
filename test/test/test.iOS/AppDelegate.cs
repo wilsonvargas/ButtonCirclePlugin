@@ -22,10 +22,16 @@ namespace test.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            ButtonCircle.FormsPlugin.iOS.ButtonCircleRenderer.Init();
+            try
+            {
+                ButtonCircle.FormsPlugin.iOS.ButtonCircleRenderer.Init();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
             return base.FinishedLaunching(app, options);
         }
     }

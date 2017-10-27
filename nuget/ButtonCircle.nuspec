@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata minClientVersion="2.8.1">
+  <metadata>
     <id>Plugins.Forms.ButtonCircle</id>
-    <version>1.0.78</version>
+    <version>1.2.26</version>
     <title>Button Circle Control Plugin for Xamarin.Forms</title>
     <authors>Wilson Vargas</authors>
     <owners>Wilson Vargas</owners>
@@ -25,23 +25,33 @@
   </metadata>
   <files>
       <!--Core-->
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.dll" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.xml" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.pdb" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.pdb" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.dll" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.xml" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.pdb" target="lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.pdb" />
 
        <!--Xamarin.Android-->
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.dll" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.dll" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.xml" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.xml" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.pdb" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.pdb" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.dll" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.xml" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.pdb" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.pdb" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.dll" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.dll" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.xml" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.xml" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Android.pdb" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.pdb" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.dll" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.xml" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Android\bin\Release\ButtonCircle.FormsPlugin.Abstractions.pdb" target="lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.pdb" />
 
      <!--Xamarin.iOSUnified-->
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.iOS.dll" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.dll" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.iOS.xml" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.xml" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.dll" />
-     <file src="ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.xml" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.iOS.dll" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.dll" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.iOS.xml" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.xml" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.dll" />
+     <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.iOS\bin\iPhone\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.xml" />
+
+     <!--UWP-->
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\bin\Release\ButtonCircle.FormsPlugin.UWP.dll" target="lib\UAP10\ButtonCircle.FormsPlugin.UWP.dll" />
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\bin\Release\ButtonCircle.FormsPlugin.UWP.xml" target="lib\UAP10\ButtonCircle.FormsPlugin.UWP.xml" />
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\bin\Release\ButtonCircle.FormsPlugin.UWP.pdb" target="lib\UAP10\ButtonCircle.FormsPlugin.UWP.pdb" />
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.dll" target="lib\UAP10\ButtonCircle.FormsPlugin.Abstractions.dll" />
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.xml" target="lib\UAP10\ButtonCircle.FormsPlugin.Abstractions.xml" />
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.Abstractions\bin\Release\ButtonCircle.FormsPlugin.Abstractions.pdb" target="lib\UAP10\ButtonCircle.FormsPlugin.Abstractions.pdb" />
+
+       <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\MaterialIcons-Regular.ttf" target="content\UAP10\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\MaterialIcons-Regular.ttf" />
       
 </files>
 </package>
