@@ -2,8 +2,10 @@
 
 Simple but elegant way of display circle buttons with an icon in your Xamarin.Forms projects. This project is based in [ImageCirclePlugin Project](https://github.com/jamesmontemagno/ImageCirclePlugin) developed by [James Montemagno](https://twitter.com/jamesmontemagno)
 
+Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/1yyib3ysj80mas1w?svg=true)](https://ci.appveyor.com/project/wilsonvargas/buttoncircleplugin)
+
 #### Setup
-* Available on NuGet: https://www.nuget.org/packages/Plugins.Forms.ButtonCircle [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
+* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
 * Install into your PCL project and Client projects.
 
 ### Android
@@ -13,8 +15,9 @@ In your Android project call:
 ```
 ButtonCircleRenderer.Init();
 ```
-![android](http://l7c.us/descargas/images/android.png)
-
+<img src="http://l7c.us/descargas/images/android.png" 
+data-canonical-src="http://l7c.us/descargas/images/android.png"
+ width="250" height="480" />
 
 ### iOS
 
@@ -32,7 +35,6 @@ And add this key in your Info.plist
       <string>MaterialIcons-Regular.ttf</string>
     </array>
 ```
-![ios](http://l7c.us/descargas/images/ios.PNG)
 
 You must do this AFTER you call Xamarin.Forms.Init();
 
@@ -47,6 +49,9 @@ You must do this AFTER you call Xamarin.Forms.Init();
 |Windows Store RT|Is coming|
 |Windows 10 UWP|Is coming|
 |Xamarin.Mac|No||
+
+#### List of icons
+You can see name of icons [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Icons.cs)
 
 #### Usage
 Instead of using an Button simply use a CircleButton instead!
