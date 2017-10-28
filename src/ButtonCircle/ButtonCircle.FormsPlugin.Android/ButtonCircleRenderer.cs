@@ -57,6 +57,25 @@ namespace ButtonCircle.FormsPlugin.Droid
                 Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
                 Element.Text = ((CircleButton)Element).Text;                
             }
+
+            if (((CircleButton)Element).Image != null)
+            {
+                Android.Widget.Button thisButton = Control as Android.Widget.Button;
+                thisButton.Touch += (object sender, Android.Views.View.TouchEventArgs e2) => {
+                    if (e2.Event.Action == MotionEventActions.Down)
+                    {
+                        Control.SetBackgroundColor(Element.BackgroundColor.ToAndroid());
+                        System.Diagnostics.Debug.WriteLine("TouchDownEvent");
+                    }
+                    else if (e2.Event.Action == MotionEventActions.Up)
+                    {
+                        Control.SetBackgroundColor(Element.BackgroundColor.ToAndroid());
+                        Control.SetShadowLayer(0, 0, 0, Android.Graphics.Color.Transparent);
+                        System.Diagnostics.Debug.WriteLine("TouchUpEvent");
+                        Control.CallOnClick();
+                    }
+                };
+            }
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
