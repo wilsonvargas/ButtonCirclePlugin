@@ -68,7 +68,7 @@ You must do this AFTER you call Xamarin.Forms.Init();
 |Xamarin.Android|Yes|API 14+|
 |Windows Phone Silverlight|No|
 |Windows Phone RT|No|
-|Windows Store RT|Yes|8.1+ 
+|Windows Store RT|Yes(beta)|8.1+ 
 |Windows 10 UWP|Yes (beta)|Build 105086+
 |Xamarin.Mac|No||
 
