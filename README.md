@@ -4,8 +4,10 @@ Simple but elegant way of display circle buttons with an icon in your Xamarin.Fo
 
 Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/1yyib3ysj80mas1w?svg=true)](https://ci.appveyor.com/project/wilsonvargas/buttoncircleplugin)
 
+![image](https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/image.png)
+
 #### Setup
-* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
+* Available on NuGet: https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/ [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
 * Install into your PCL project and Client projects.
 
 ### Android
@@ -15,9 +17,9 @@ In your Android project call:
 ```
 ButtonCircleRenderer.Init();
 ```
-<img src="http://l7c.us/descargas/images/android.png" 
-data-canonical-src="http://l7c.us/descargas/images/android.png"
- width="250" height="480" />
+<img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/android.png" 
+data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/android.png"
+ width="450" height="480" />
 
 ### iOS
 
@@ -36,6 +38,26 @@ And add this key in your Info.plist
     </array>
 ```
 
+<img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/ios.png" 
+data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/ios.png"
+ width="480" height="480" />
+
+
+### UWP
+
+In your UWP project add MaterialIcons-Regular.ttf file to:
+
+```
+Assets/Fonts
+```
+
+You can download this file [here](https://github.com/wilsonvargas/ButtonCirclePlugin/raw/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/MaterialIcons-Regular.ttf)
+
+<img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
+data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png"
+ width="310" height="510" />
+
+
 You must do this AFTER you call Xamarin.Forms.Init();
 
 **Platform Support**
@@ -44,10 +66,10 @@ You must do this AFTER you call Xamarin.Forms.Init();
 | ------------------- | :-----------: | :------------------: |
 |Xamarin.iOS|Yes|iOS 7+|
 |Xamarin.Android|Yes|API 14+|
-|Windows Phone Silverlight|Is coming|
-|Windows Phone RT|Is coming|
-|Windows Store RT|Is coming|
-|Windows 10 UWP|Is coming|
+|Windows Phone Silverlight|No|
+|Windows Phone RT|No|
+|Windows Store RT|Yes|8.1+ 
+|Windows 10 UWP|Yes (beta)|Build 105086+
 |Xamarin.Mac|No||
 
 #### List of icons
