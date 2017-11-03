@@ -49,10 +49,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ButtonCircle.FormsPlugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.32\lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.46\lib\MonoAndroid10\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="ButtonCircle.FormsPlugin.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.32\lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.dll</HintPath>
+      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.46\lib\MonoAndroid10\ButtonCircle.FormsPlugin.Android.dll</HintPath>
     </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>

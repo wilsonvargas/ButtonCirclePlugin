@@ -20,7 +20,6 @@ namespace test.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
             LoadApplication(new test.App());
         }
     }

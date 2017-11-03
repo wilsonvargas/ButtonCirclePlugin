@@ -1,8 +1,8 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xam.Plugins.Forms.ButtonCircle": "1.0.34",
-    "Xamarin.Forms": "2.3.4.224"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
+    "Plugins.Forms.ButtonCircle": "1.2.46",
+    "Xamarin.Forms": "2.3.4.267"
   },
   "frameworks": {
     "uap10.0.10586": {}

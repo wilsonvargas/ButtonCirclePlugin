@@ -38,6 +38,7 @@ namespace ButtonCircle.FormsPlugin.iOS
 
             CreateCircle();
 
+
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
                 Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
@@ -48,6 +49,19 @@ namespace ButtonCircle.FormsPlugin.iOS
             {
                 Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 Element.Text = ((CircleButton)Element).Text;
+            }
+
+            if (((CircleButton)Element).Image != null)
+            {
+                UIButton thisButton = Control as UIButton;
+                thisButton.TouchDown += delegate 
+                {
+                    System.Diagnostics.Debug.WriteLine("TouchDownEvent");
+                };
+                thisButton.TouchUpInside += delegate 
+                {
+                    System.Diagnostics.Debug.WriteLine("TouchUpEvent");
+                };
             }
         }
         /// <summary>
@@ -101,7 +115,7 @@ namespace ButtonCircle.FormsPlugin.iOS
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Unable to create circle image: " + ex);
+                Debug.WriteLine("Unable to create circle button: " + ex);
             }
         }
     }
