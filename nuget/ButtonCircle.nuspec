@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Plugins.Forms.ButtonCircle</id>
-    <version>1.2.46</version>
+    <version>1.2.47</version>
     <title>Button Circle Control Plugin for Xamarin.Forms</title>
     <authors>Wilson Vargas</authors>
     <owners>Wilson Vargas</owners>
     <licenseUrl>https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/wilsonvargas/ButtonCirclePlugin</projectUrl>
-    <iconUrl>http://l7c.us/descargas/images/icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/icon/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
           Custom control for your Xamarin.Forms project ot turn your buttons into elegant circle buttons with an icon.
