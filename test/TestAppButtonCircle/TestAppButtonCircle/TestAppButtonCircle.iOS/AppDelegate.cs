@@ -24,7 +24,7 @@ namespace TestAppButtonCircle.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            ButtonCircle.FormsPlugin.iOS.ButtonCircleRenderer.Init();
             return base.FinishedLaunching(app, options);
         }
     }

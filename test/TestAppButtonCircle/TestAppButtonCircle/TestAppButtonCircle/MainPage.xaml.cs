@@ -13,5 +13,10 @@ namespace TestAppButtonCircle
         {
             InitializeComponent();
         }
+
+        private void CircleButton_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage.DisplayAlert("Alert", "I'm a button", "OK");
+        }
     }
 }
