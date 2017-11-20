@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using TestAppButtonCircle.Views;
 using Xamarin.Forms;
 
 namespace TestAppButtonCircle
@@ -13,7 +13,7 @@ namespace TestAppButtonCircle
         {
             InitializeComponent();
 
-            MainPage = new TestAppButtonCircle.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

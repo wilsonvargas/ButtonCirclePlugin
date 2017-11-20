@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             Title="Second Page"
+             x:Class="TestAppButtonCircle.Views.SecondPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+            <controls:CircleButton Icon="ic_keyboard_backspace" FontSize="25" TextColor="White" HorizontalOptions="Center"
+                            HeightRequest="50" WidthRequest="50" BorderRadius="50"
+                            BorderColor="White" BorderThickness="3" BackgroundColor="#78C0A8" Command="{Binding GoBackCommand}"/>
+            <Label Text="I'm use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

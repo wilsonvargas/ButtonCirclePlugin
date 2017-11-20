@@ -48,9 +48,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Bruno Vera (2TM7EJGN7B)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Demos Profile</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -120,10 +121,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ButtonCircle.FormsPlugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.47\lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.52\lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="ButtonCircle.FormsPlugin.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.47\lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.dll</HintPath>
+      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.2.52\lib\Xamarin.iOS10\ButtonCircle.FormsPlugin.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

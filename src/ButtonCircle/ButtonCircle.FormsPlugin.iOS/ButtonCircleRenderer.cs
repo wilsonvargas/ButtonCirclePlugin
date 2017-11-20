@@ -26,6 +26,24 @@ namespace ButtonCircle.FormsPlugin.iOS
         {
             var temp = DateTime.Now;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected override void Dispose(bool disposing)
+        {
+            try
+            {
+                base.Dispose(disposing);
+            }
+            catch (NullReferenceException)
+            {
+                // Random bug in Dispose method
+                // https://bugzilla.xamarin.com/show_bug.cgi?id=21457
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -37,8 +55,6 @@ namespace ButtonCircle.FormsPlugin.iOS
                 throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icons))); ;
 
             CreateCircle();
-
-
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
                 Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
@@ -48,17 +64,19 @@ namespace ButtonCircle.FormsPlugin.iOS
             else
             {
                 Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                Control.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap;
+                Control.TitleLabel.TextAlignment = UITextAlignment.Center;
                 Element.Text = ((CircleButton)Element).Text;
             }
 
             if (((CircleButton)Element).Image != null)
             {
                 UIButton thisButton = Control as UIButton;
-                thisButton.TouchDown += delegate 
+                thisButton.TouchDown += delegate
                 {
                     System.Diagnostics.Debug.WriteLine("TouchDownEvent");
                 };
-                thisButton.TouchUpInside += delegate 
+                thisButton.TouchUpInside += delegate
                 {
                     System.Diagnostics.Debug.WriteLine("TouchUpEvent");
                 };
@@ -81,6 +99,7 @@ namespace ButtonCircle.FormsPlugin.iOS
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
               e.PropertyName == CircleButton.TextProperty.PropertyName)
             {
+
                 CreateCircle();
 
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
@@ -91,6 +110,8 @@ namespace ButtonCircle.FormsPlugin.iOS
                 else
                 {
                     Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                    Control.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap;
+                    Control.TitleLabel.TextAlignment = UITextAlignment.Center;
                     Element.Text = ((CircleButton)Element).Text;
                 }
             }

@@ -3,23 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
              xmlns:local="clr-namespace:TestAppButtonCircle"
-             x:Class="TestAppButtonCircle.MainPage">
+             Title="Main Page"
+             x:Class="TestAppButtonCircle.Views.MainPage">
     <ContentPage.Content>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
 
             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
                 <controls:CircleButton Text="Orders&#x0a;&#x0a;asadssdas" FontSize="5" TextColor="Black" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked"/>
+                            BackgroundColor="#DCDCDC" Command="{Binding NavigationCommand}"/>
                 <Label Text="I'm not use an icon, only text!" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
-                <Button Text="Orders&#x0a;&#x0a;asadssdas" FontSize="5" TextColor="Black" HorizontalOptions="Center" BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked"/>
-                
             </StackLayout>
 
             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
                 <controls:CircleButton Icon="ic_plus_one" FontSize="25" TextColor="White" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BackgroundColor="#99E758" Clicked="CircleButton_Clicked"/>
+                            BackgroundColor="#99E758" Command="{Binding NavigationCommand}"/>
                 <Label Text="I'm not use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
