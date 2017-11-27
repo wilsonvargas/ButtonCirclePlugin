@@ -49,7 +49,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         /// Property definition for the <see cref="Icon"/> Property
         /// </summary>
         public static readonly BindableProperty IconProperty =
-        BindableProperty.Create(propertyName: nameof(BorderColor),
+        BindableProperty.Create(propertyName: nameof(Icon),
               returnType: typeof(Icons),
               declaringType: typeof(CircleButton),
               defaultValue: Icons.ic_default);
