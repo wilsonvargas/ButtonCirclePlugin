@@ -49,11 +49,10 @@ namespace ButtonCircle.FormsPlugin.Droid
 
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                string fontName = Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon);
-                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, fontName);
-
-                string iconString = ((CircleButton)Element).Icon;
-                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(iconString,
+                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets,
+                    Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon));
+                
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
                     ((CircleButton)Element).FontIcon);
 
                 Element.Text = $"{icon.Character}";
@@ -96,10 +95,10 @@ namespace ButtonCircle.FormsPlugin.Droid
             {
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    string fontName = Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon);
-                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, fontName);
+                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets,
+                    Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon));
 
-                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text, 
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
                         ((CircleButton)Element).FontIcon);
 
                     Element.Text = $"{icon.Character}";
