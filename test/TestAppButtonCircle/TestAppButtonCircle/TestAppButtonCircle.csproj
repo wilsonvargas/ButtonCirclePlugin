@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ButtonCircle.FormsPlugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.3.4\lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Plugins.Forms.ButtonCircle.1.3.5\lib\portable-net45+wp80+win8+wpa81\ButtonCircle.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>

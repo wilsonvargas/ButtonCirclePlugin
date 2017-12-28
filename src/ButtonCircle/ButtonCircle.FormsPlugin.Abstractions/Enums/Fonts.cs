@@ -8,7 +8,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Enums
 {
     public enum Fonts
     {
-        Normal,
         FontAwesome,
         Material
     }

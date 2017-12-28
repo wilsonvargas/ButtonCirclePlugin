@@ -36,9 +36,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             }
             switch (font)
             {
-                case Fonts.Normal:
-                    return null;
-                    break;
                 case Fonts.FontAwesome:
                     return FontAwesomeCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
                     break;
@@ -62,9 +59,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
         {
             switch (font)
             {
-                case Fonts.Normal:
-                    return string.Empty;
-                    break;
                 case Fonts.FontAwesome:
                     return "FontAwesome";
                     break;
@@ -86,9 +80,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
         {
             switch (font)
             {
-                case Fonts.Normal:
-                    return string.Empty;
-                    break;
                 case Fonts.FontAwesome:
                     return "fontawesome.ttf";
                     break;
@@ -111,9 +102,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
         {
             switch (font)
             {
-                case Fonts.Normal:
-                    return string.Empty;
-                    break;
                 case Fonts.FontAwesome:
                     return "/Assets/Fonts/fontawesome.ttf#Material Icons";
                     break;

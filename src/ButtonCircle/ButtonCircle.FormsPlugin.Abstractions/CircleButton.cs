@@ -52,7 +52,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         BindableProperty.Create(propertyName: nameof(FontIcon),
               returnType: typeof(Fonts),
               declaringType: typeof(CircleButton),
-              defaultValue: Fonts.Normal);
+              defaultValue: Fonts.Material);
 
         /// <summary>
         /// Gets or sets the font.
