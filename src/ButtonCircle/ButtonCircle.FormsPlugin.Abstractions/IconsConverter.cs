@@ -24,7 +24,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns></returns>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <exception cref="NotImplementedException"></exception>
         public override object ConvertFromInvariantString(string value)
         {
             if (value == null)

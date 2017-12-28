@@ -11,12 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCircle.FormsPlugin.UWP", "ButtonCircle\ButtonCircle.FormsPlugin.UWP\ButtonCircle.FormsPlugin.UWP.csproj", "{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonts", "Fonts", "{FD071C5A-7818-44A1-A6BA-AAA3089C1A61}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FontAwesome", "FontAwesome", "{9E87B863-5D35-43B4-8BA9-8B0E8E062832}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material", "Material", "{8B2CEDE2-78B3-4261-83AF-92EA7926D8C4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,10 +126,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9E87B863-5D35-43B4-8BA9-8B0E8E062832} = {FD071C5A-7818-44A1-A6BA-AAA3089C1A61}
-		{8B2CEDE2-78B3-4261-83AF-92EA7926D8C4} = {FD071C5A-7818-44A1-A6BA-AAA3089C1A61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {477E7362-D9D9-4214-855A-688D88BC06EC}
