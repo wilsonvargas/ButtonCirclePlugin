@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using ButtonCircle.FormsPlugin.Abstractions.Enums;
+using Xamarin.Forms;
 
 namespace ButtonCircle.FormsPlugin.Abstractions
 {
@@ -44,15 +45,36 @@ namespace ButtonCircle.FormsPlugin.Abstractions
             set { SetValue(BorderColorProperty, value); }
         }
 
+        /// <summary>
+        /// Property definition for the <see cref="Fonts"/> Property
+        /// </summary>
+        public static readonly BindableProperty FontIconProperty =
+        BindableProperty.Create(propertyName: nameof(FontIcon),
+              returnType: typeof(Fonts),
+              declaringType: typeof(CircleButton),
+              defaultValue: Fonts.Normal);
+
+        /// <summary>
+        /// Gets or sets the font.
+        /// </summary>
+        /// <value>
+        /// The icon.
+        /// </value>
+        public Fonts FontIcon
+        {
+            get { return (Fonts)GetValue(FontIconProperty); }
+            set { SetValue(FontIconProperty, value); }
+        }
+
 
         /// <summary>
         /// Property definition for the <see cref="Icon"/> Property
         /// </summary>
         public static readonly BindableProperty IconProperty =
         BindableProperty.Create(propertyName: nameof(Icon),
-              returnType: typeof(Icons),
+              returnType: typeof(string),
               declaringType: typeof(CircleButton),
-              defaultValue: Icons.ic_default);
+              defaultValue: string.Empty);
 
         /// <summary>
         /// Gets or sets the icon.
@@ -60,9 +82,9 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         /// <value>
         /// The icon.
         /// </value>
-        public Icons Icon
+        public string Icon
         {
-            get { return (Icons)GetValue(IconProperty); }
+            get { return (string)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
         }
     }

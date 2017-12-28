@@ -52,13 +52,21 @@ namespace ButtonCircle.FormsPlugin.iOS
         {
             base.OnElementChanged(e);
             if (Control == null || Element == null)
-                throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icons))); ;
+                throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icon))); ;
 
             CreateCircle();
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
-                Element.Text = ((CircleButton)Element).Icon;
+
+                Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
+                        (((CircleButton)Element).FontIcon), (nfloat)Element.FontSize);
+
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
+                    ((CircleButton)Element).FontIcon);
+
+                Control.SetTitle($"{icon.Character}", UIControlState.Normal);
+                //Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                //Element.Text = ((CircleButton)Element).Icon;
 
             }
             else
@@ -66,7 +74,8 @@ namespace ButtonCircle.FormsPlugin.iOS
                 Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 Control.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap;
                 Control.TitleLabel.TextAlignment = UITextAlignment.Center;
-                Element.Text = ((CircleButton)Element).Text;
+                //Element.Text = ((CircleButton)Element).Text;
+                Control.SetTitle(((CircleButton)Element).Text, UIControlState.Normal);
             }
 
             if (((CircleButton)Element).Image != null)
@@ -97,22 +106,33 @@ namespace ButtonCircle.FormsPlugin.iOS
               e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
-              e.PropertyName == CircleButton.TextProperty.PropertyName)
+              e.PropertyName == CircleButton.TextProperty.PropertyName ||
+              e.PropertyName == CircleButton.FontIconProperty.PropertyName)
             {
 
                 CreateCircle();
 
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
-                    Element.Text = ((CircleButton)Element).Icon;
+                    Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
+                        (((CircleButton)Element).FontIcon),(nfloat)Element.FontSize);
+
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
+                        ((CircleButton)Element).FontIcon);
+
+                    Control.SetTitle($"{icon.Character}", UIControlState.Normal);
+
+
+                    //Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
+                    //Element.Text = ((CircleButton)Element).Icon;
                 }
                 else
                 {
                     Control.Font = Font.OfSize(Element.FontFamily, Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                     Control.TitleLabel.LineBreakMode = UILineBreakMode.WordWrap;
                     Control.TitleLabel.TextAlignment = UITextAlignment.Center;
-                    Element.Text = ((CircleButton)Element).Text;
+                    //Element.Text = ((CircleButton)Element).Text;
+                    Control.SetTitle(((CircleButton)Element).Text, UIControlState.Normal);
                 }
             }
         }

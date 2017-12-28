@@ -28,13 +28,16 @@ namespace ButtonCircle.FormsPlugin.UWP
         {
             base.OnElementChanged(e);
             if (Control == null || Element == null)
-                throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icons))); ;
+                throw new InvalidOperationException(String.Format("Cannot convert {0} into {1}", Element.Text, typeof(Icon))); ;
 
             CreateCircle();
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.FontFamily = new FontFamily("/Assets/Fonts/MaterialIcons-Regular.ttf#Material Icons");
-                Control.Content = ((CircleButton)Element).Icon.Icon;
+                Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(((CircleButton)Element).FontIcon));
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
+                    ((CircleButton)Element).FontIcon);
+
+                Control.Content = $"{icon.Character}";
             }
             else if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
             {
@@ -56,13 +59,17 @@ namespace ButtonCircle.FormsPlugin.UWP
               e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
-              e.PropertyName == CircleButton.TextProperty.PropertyName)
+              e.PropertyName == CircleButton.TextProperty.PropertyName ||
+              e.PropertyName == CircleButton.FontIconProperty.PropertyName)
             {
                 CreateCircle();
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    Control.FontFamily = new FontFamily("/Assets/Fonts/MaterialIcons-Regular.ttf#Material Icons");
-                    Control.Content = ((CircleButton)Element).Icon.Icon;
+                    Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(((CircleButton)Element).FontIcon));
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
+                        ((CircleButton)Element).FontIcon);
+
+                    Control.Content = $"{icon.Character}";
                 }
                 else if (!String.IsNullOrEmpty(((CircleButton)Element).Text))
                 {

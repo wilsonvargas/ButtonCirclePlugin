@@ -22,5 +22,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions
         /// </summary>
         /// <returns></returns>
         Char Character { get; }
+        
     }
 }

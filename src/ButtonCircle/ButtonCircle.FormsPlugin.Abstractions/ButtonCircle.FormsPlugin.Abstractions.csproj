@@ -39,10 +39,9 @@
   <ItemGroup>
     <Compile Include="CircleButton.cs" />
     <Compile Include="FontAwesome\FontAwesomeCollection.cs" />
+    <Compile Include="Enums\Fonts.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Icon.cs" />
-    <Compile Include="Icons.cs" />
-    <Compile Include="IconsConverter.cs" />
     <Compile Include="IIcon.cs" />
     <Compile Include="Material\MaterialCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

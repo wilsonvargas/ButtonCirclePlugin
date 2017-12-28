@@ -49,8 +49,14 @@ namespace ButtonCircle.FormsPlugin.Droid
 
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
-                Element.Text = ((CircleButton)Element).Icon;
+                string fontName = Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon);
+                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, fontName);
+
+                string iconString = ((CircleButton)Element).Icon;
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(iconString,
+                    ((CircleButton)Element).FontIcon);
+
+                Element.Text = $"{icon.Character}";
             }
             else
             {
@@ -85,12 +91,19 @@ namespace ButtonCircle.FormsPlugin.Droid
             if (e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
-              e.PropertyName == CircleButton.TextProperty.PropertyName)
+              e.PropertyName == CircleButton.TextProperty.PropertyName || 
+              e.PropertyName == CircleButton.FontIconProperty.PropertyName )
             {
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, "MaterialIcons-Regular.ttf");
-                    Element.Text = ((CircleButton)Element).Icon;
+                    string fontName = Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon);
+                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, fontName);
+
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text, 
+                        ((CircleButton)Element).FontIcon);
+
+                    Element.Text = $"{icon.Character}";
+
                 }
                 else
                 {
