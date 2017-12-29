@@ -16,7 +16,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                <controls:CircleButton FontIcon="Material" Icon="md-plus-one" FontSize="25" TextColor="White" HorizontalOptions="Center"
+                <controls:CircleButton FontIcon="FontAwesome" Icon="fa-apple" FontSize="25" TextColor="White" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
                             BackgroundColor="#99E758" Command="{Binding NavigationCommand}"/>
                 <Label Text="I'm not use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
