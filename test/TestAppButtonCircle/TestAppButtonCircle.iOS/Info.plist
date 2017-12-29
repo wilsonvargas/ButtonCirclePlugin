@@ -25,7 +25,7 @@
     <key>CFBundleDisplayName</key>
     <string>TestAppButtonCircle</string>
     <key>CFBundleIdentifier</key>
-    <string>com.wilsonvargas.demos</string>
+    <string>com.wilsonvargas.apps</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleIconFiles</key>
