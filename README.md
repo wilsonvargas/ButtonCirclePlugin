@@ -53,7 +53,9 @@ Assets/Fonts
 ```
 
 You can download this file here:
+
 [Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
+
 [FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
 
 <img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
@@ -92,7 +94,7 @@ new ButtonImage
   HeightRequest = 150,
   WidthRequest = 150,
   HorizontalOptions = LayoutOptions.Center,
-  FontIcon = Material
+  FontIcon = Fonts.Material
   Icon = "md-ic-add"
 }
 ```
