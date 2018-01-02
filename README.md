@@ -75,8 +75,8 @@ You must do this AFTER you call Xamarin.Forms.Init();
 
 #### List of icons
 You can see name of icons
-For FontAwesome [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/FontAwesome/FontAwesomeCollection.cs)
-For Material design icon [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Material/MaterialCollection.cs)
+for FontAwesome [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/FontAwesome/FontAwesomeCollection.cs)
+and for Material design icon [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Material/MaterialCollection.cs)
 
 #### Usage
 Instead of using an Button simply use a CircleButton instead!
