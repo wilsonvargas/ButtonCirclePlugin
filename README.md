@@ -34,7 +34,8 @@ And add this key in your Info.plist
 ```
 <key>UIAppFonts</key>
     <array>
-      <string>MaterialIcons-Regular.ttf</string>
+      <string>materialicons.ttf</string>
+      <string>fontawesome.ttf</string>
     </array>
 ```
 
@@ -45,7 +46,7 @@ data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCircleP
 
 ### UWP
 
-In your UWP project add MaterialIcons-Regular.ttf file to:
+In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 
 ```
 Assets/Fonts
@@ -73,7 +74,9 @@ You must do this AFTER you call Xamarin.Forms.Init();
 |Xamarin.Mac|No||
 
 #### List of icons
-You can see name of icons [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Icons.cs)
+You can see name of icons
+for FontAwesome [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/FontAwesome/FontAwesomeCollection.cs)
+and for Material design icon [here](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/Material/MaterialCollection.cs)
 
 #### Usage
 Instead of using an Button simply use a CircleButton instead!
@@ -87,7 +90,8 @@ new ButtonImage
   HeightRequest = 150,
   WidthRequest = 150,
   HorizontalOptions = LayoutOptions.Center,
-  Icon = "ic_add"
+  FontIcon = Material
+  Icon = "md-ic-add"
 }
 ```
 
@@ -102,7 +106,8 @@ Then add the xaml:
 
 ```xml
 <local:CircleButton 
-        Icon="ic_directions_bike" 
+        FontIcon="Material"
+        Icon="md-ic-directions-bike" 
         FontSize="30" TextColor="Black" 
         HeightRequest="70" WidthRequest="70" 
         BorderThickness="5" BorderColor="Black" 
