@@ -33,9 +33,11 @@ namespace ButtonCircle.FormsPlugin.UWP
             CreateCircle();
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(((CircleButton)Element).FontIcon));
-                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
-                    ((CircleButton)Element).FontIcon);
+                Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(
+                    ((CircleButton)Element).FontIcon));
+
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
+                       ((CircleButton)Element).FontIcon);
 
                 Control.Content = $"{icon.Character}";
             }
@@ -65,9 +67,11 @@ namespace ButtonCircle.FormsPlugin.UWP
                 CreateCircle();
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(((CircleButton)Element).FontIcon));
-                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
-                        ((CircleButton)Element).FontIcon);
+                    Control.FontFamily = new FontFamily(Abstractions.Helpers.Extensions.FindPathForFont(
+                        ((CircleButton)Element).FontIcon));
+
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
+                       ((CircleButton)Element).FontIcon);
 
                     Control.Content = $"{icon.Character}";
                 }

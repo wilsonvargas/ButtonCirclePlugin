@@ -61,8 +61,8 @@ namespace ButtonCircle.FormsPlugin.iOS
                 Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
                         (((CircleButton)Element).FontIcon), (nfloat)Element.FontSize);
 
-                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
-                    ((CircleButton)Element).FontIcon);
+                IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
+                       ((CircleButton)Element).FontIcon);
 
                 Control.SetTitle($"{icon.Character}", UIControlState.Normal);
                 //Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
@@ -117,8 +117,8 @@ namespace ButtonCircle.FormsPlugin.iOS
                     Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
                         (((CircleButton)Element).FontIcon),(nfloat)Element.FontSize);
 
-                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(Element.Text,
-                        ((CircleButton)Element).FontIcon);
+                    IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
+                       ((CircleButton)Element).FontIcon);
 
                     Control.SetTitle($"{icon.Character}", UIControlState.Normal);
 

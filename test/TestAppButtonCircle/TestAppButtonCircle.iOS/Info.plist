@@ -50,7 +50,8 @@
     <string>LaunchScreen</string>
 <key>UIAppFonts</key>
 	<array>
-		<string>MaterialIcons-Regular.ttf</string>
+		<string>materialicons.ttf</string>
+    <string>fontawesome.ttf</string>
 </array>
   </dict>
 </plist>
