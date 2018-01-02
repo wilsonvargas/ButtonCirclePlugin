@@ -90,6 +90,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Fonts\fontawesome.ttf" />
+    <Content Include="Assets\Fonts\materialicons.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

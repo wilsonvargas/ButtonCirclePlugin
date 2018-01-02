@@ -103,10 +103,10 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             switch (font)
             {
                 case Fonts.FontAwesome:
-                    return "/Assets/Fonts/fontawesome.ttf#Material Icons";
+                    return "/Assets/Fonts/fontawesome.ttf#FontAwesome";
                     break;
                 case Fonts.Material:
-                    return "/Assets/Fonts/materialicons.ttf#FontAwesome";
+                    return "/Assets/Fonts/materialicons.ttf#Material Icons";
                     break;
                 default:
                     return string.Empty;
