@@ -6,34 +6,42 @@
              Title="Main Page"
              x:Class="TestAppButtonCircle.Views.MainPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                <controls:CircleButton Text="Orders&#x0a;&#x0a;asadssdas" FontSize="5" TextColor="Black" HorizontalOptions="Center"
+            <StackLayout Grid.Row="0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <controls:CircleButton Text="Orders&#x0a;&#x0a;15" FontSize="Micro" TextColor="Black" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
                             BackgroundColor="#DCDCDC" Command="{Binding NavigationCommand}"/>
-                <Label Text="I'm not use an icon, only text!" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+                <Label Text="Button with text" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
 
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
-                <controls:CircleButton FontIcon="FontAwesome" Icon="fa-500px" FontSize="25" TextColor="White" HorizontalOptions="Center"
+            <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <controls:CircleButton FontIcon="FontAwesome" Icon="fa-apple" FontSize="25" TextColor="White" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
                             BackgroundColor="#99E758" Command="{Binding NavigationCommand}"/>
-                <Label Text="I'm not use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+                <Label Text="Button with FontAwesome font" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+            <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <controls:CircleButton FontIcon="Material" Icon="md-add-alert" FontSize="25" TextColor="Black" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
                             BorderColor="Black" BorderThickness="3" BackgroundColor="White" Clicked="CircleButton_Clicked"/>
-                <Label Text="I'm use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+                <Label Text="Button with Material icons font" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <controls:CircleButton Image="icon.png" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
                             BackgroundColor="#3598DB" Clicked="CircleButton_Clicked"/>
-                <Label Text="I'm use an image, no icon, no text" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+                <Label Text="Button with image" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
-
-        </StackLayout>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
