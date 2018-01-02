@@ -52,7 +52,9 @@ In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 Assets/Fonts
 ```
 
-You can download this file [here](https://github.com/wilsonvargas/ButtonCirclePlugin/raw/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/MaterialIcons-Regular.ttf)
+You can download this file here:
+[Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
+[FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
 
 <img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
 data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png"
