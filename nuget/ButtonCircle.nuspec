@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="2.8.1">
     <id>Plugins.Forms.ButtonCircle</id>
-    <version>1.4.1</version>
+    <version>2.0.2</version>
     <title>Button Circle Control Plugin for Xamarin.Forms</title>
     <authors>Wilson Vargas</authors>
     <owners>Wilson Vargas</owners>
@@ -88,5 +88,6 @@
      <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.iOS\Resources\fontawesome.ttf" target="content\Xamarin.iOS10\Resources\fontawesome.ttf" />
      <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\materialicons.ttf" target="content\UAP10\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\materialicons.ttf" />
      <file src="../src/ButtonCircle\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\fontawesome.ttf" target="content\UAP10\ButtonCircle.FormsPlugin.UWP\Assets\Fonts\fontawesome.ttf" />
+     
 </files>
 </package>
