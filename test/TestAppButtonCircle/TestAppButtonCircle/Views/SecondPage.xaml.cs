@@ -13,11 +13,11 @@ namespace TestAppButtonCircle.Views
 	public partial class SecondPage : ContentPage
 	{
         SecondPageViewModel vm;
-		public SecondPage ()
+        public SecondPage ()
 		{
 			InitializeComponent ();
             BindingContext = vm = new SecondPageViewModel();
             vm.Navigation = this.Navigation;
-		}
+        }
 	}
 }

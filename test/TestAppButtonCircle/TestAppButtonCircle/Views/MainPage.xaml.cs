@@ -5,22 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using TestAppButtonCircle.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace TestAppButtonCircle.Views
 {
-    public partial class MainPage : ContentPage
-    {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class MainPage : ContentPage
+	{
         MainPageViewModel vm;
-        public MainPage()
-        {
-            InitializeComponent();
+        public MainPage ()
+		{
+			InitializeComponent ();
             BindingContext = vm = new MainPageViewModel();
             vm.Navigation = this.Navigation;
         }
-
-        private void CircleButton_Clicked(object sender, EventArgs e)
-        {
-            App.Current.MainPage.DisplayAlert("Alert", "I'm a button", "OK");
-        }
-    }
+	}
 }

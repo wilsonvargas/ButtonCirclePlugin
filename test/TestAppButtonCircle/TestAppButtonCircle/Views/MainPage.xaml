@@ -2,8 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
-             xmlns:local="clr-namespace:TestAppButtonCircle"
-             Title="Main Page"
              x:Class="TestAppButtonCircle.Views.MainPage">
     <ContentPage.Content>
         <Grid>
@@ -31,17 +29,17 @@
             <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <controls:CircleButton FontIcon="Material" Icon="md-add-alert" FontSize="25" TextColor="Black" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BorderColor="Black" BorderThickness="3" BackgroundColor="White" Clicked="CircleButton_Clicked"/>
+                            BorderColor="Black" BorderThickness="3" BackgroundColor="White" Command="{Binding DisplayAlertCommand}"/>
                 <Label Text="Button with Material icons font" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
 
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                <controls:CircleButton Image="icon.png" HorizontalOptions="Center"
+                <controls:CircleButton Image="icon1.png" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BackgroundColor="#3598DB" Clicked="CircleButton_Clicked"/>
+                            BackgroundColor="#3598DB" Command="{Binding DisplayAlertCommand}"/>
                 <Label Text="Button with image" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black"/>
             </StackLayout>
-            
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
