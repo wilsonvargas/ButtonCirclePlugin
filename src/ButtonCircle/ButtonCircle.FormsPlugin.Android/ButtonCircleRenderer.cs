@@ -70,13 +70,11 @@ namespace ButtonCircle.FormsPlugin.Droid
                     if (e2.Event.Action == MotionEventActions.Down)
                     {
                         Control.SetBackgroundColor(Element.BackgroundColor.ToAndroid());
-                        System.Diagnostics.Debug.WriteLine("TouchDownEvent");
                     }
                     else if (e2.Event.Action == MotionEventActions.Up)
                     {
                         Control.SetBackgroundColor(Element.BackgroundColor.ToAndroid());
                         Control.SetShadowLayer(0, 0, 0, Android.Graphics.Color.Transparent);
-                        System.Diagnostics.Debug.WriteLine("TouchUpEvent");
                         Control.CallOnClick();
                     }
                 };

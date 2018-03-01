@@ -13,11 +13,11 @@ namespace TestAppButtonCircle.Views
 	public partial class MainPage : ContentPage
 	{
         MainPageViewModel vm;
-        public MainPage ()
-		{
-			InitializeComponent ();
+        public MainPage()
+        {
+            InitializeComponent();
             BindingContext = vm = new MainPageViewModel();
             vm.Navigation = this.Navigation;
         }
-	}
+    }
 }

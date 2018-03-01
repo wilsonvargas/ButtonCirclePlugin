@@ -3842,8 +3842,8 @@ namespace TestAppButtonCircle.Droid
 			// aapt resource value: 0x7f0b0170
 			public const int Animation_Design_BottomSheetDialog = 2131427696;
 			
-			// aapt resource value: 0x7f0b018b
-			public const int AppCompatDialogStyle = 2131427723;
+			// aapt resource value: 0x7f0b018c
+			public const int AppCompatDialogStyle = 2131427724;
 			
 			// aapt resource value: 0x7f0b00b2
 			public const int Base_AlertDialog_AppCompat = 2131427506;
@@ -4324,6 +4324,9 @@ namespace TestAppButtonCircle.Droid
 			
 			// aapt resource value: 0x7f0b018a
 			public const int MainTheme_Base = 2131427722;
+			
+			// aapt resource value: 0x7f0b018b
+			public const int NoShadowButton = 2131427723;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;

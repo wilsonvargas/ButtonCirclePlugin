@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{98BCE92C-F6D3-4375-8BCF-325AA5714D0D}</ProjectGuid>
+    <ProjectGuid>{48C09F13-063B-4324-AAA1-CD1A44F61955}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>TestAppButtonCircle.Droid</RootNamespace>
@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Plugins.Forms.ButtonCircle">
-      <Version>2.0.1-beta</Version>
+      <Version>2.0.1.48-beta</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
@@ -63,8 +63,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\fontawesome.ttf" />
-    <AndroidAsset Include="Assets\materialicons.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -86,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestAppButtonCircle\TestAppButtonCircle.csproj">
-      <Project>{425B6708-2A7C-4833-9A3C-5FF93500281D}</Project>
+      <Project>{66326B4A-B692-44C7-9A96-AAA7E8C24964}</Project>
       <Name>TestAppButtonCircle</Name>
     </ProjectReference>
   </ItemGroup>
