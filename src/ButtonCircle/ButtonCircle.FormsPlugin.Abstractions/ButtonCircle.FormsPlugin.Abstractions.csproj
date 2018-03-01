@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.0\ButtonCircle.FormsPlugin.Abstractions.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\ButtonCircle.FormsPlugin.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
