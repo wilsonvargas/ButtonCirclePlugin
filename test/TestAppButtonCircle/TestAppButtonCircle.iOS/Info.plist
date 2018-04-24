@@ -50,5 +50,10 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>TestAppButtonCircle</string>
+	<key>UIAppFonts</key>
+    <array>
+      <string>materialicons.ttf</string>
+      <string>fontawesome.ttf</string>
+    </array>
 </dict>
 </plist>

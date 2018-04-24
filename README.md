@@ -7,7 +7,7 @@ Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/1yyib
 ![image](https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/image.png)
 
 #### Setup
-* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Plugins.Forms.ButtonCircle.svg?label=NuGet)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/) https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/
+* Available on NuGet: [![NuGet](https://buildstats.info/nuget/Plugins.Forms.ButtonCircle)](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
 * Install into your PCL project and Client projects.
 
 ### Android
@@ -50,6 +50,12 @@ In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 
 ```
 Assets/Fonts
+```
+
+Also call Init method:
+
+```
+ButtonCircleRenderer.Init();
 ```
 
 You can download this file here:
