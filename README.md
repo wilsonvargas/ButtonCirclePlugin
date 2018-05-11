@@ -2,15 +2,7 @@
 
 Simple but elegant way of display circle buttons with an icon in your Xamarin.Forms projects. 
 
-Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/1yyib3ysj80mas1w?svg=true)](https://ci.appveyor.com/project/wilsonvargas/buttoncircleplugin) 
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="RV8TWXDKBVPUC">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
-
+Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/1yyib3ysj80mas1w?svg=true)](https://ci.appveyor.com/project/wilsonvargas/buttoncircleplugin)  [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/wilsondonations/5)
 
 ![image](https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/image.png)
 
