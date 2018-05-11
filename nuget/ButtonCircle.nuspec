@@ -14,7 +14,7 @@
           Custom control for your Xamarin.Forms project ot turn your buttons into elegant circle buttons with an icon.
          Customizable border thickness and color.
          Ensure you call ButtonCircleRenderer.Init() on each platform!
-          Built against: 2.5.0.280555
+          Built against: 2.5.1.444934
 </description>
 <copyright>Copyright ©2017</copyright>
     <summary>Use a Circle Button Icon in your Xamarin.Forms projects! Ensure you call ButtonCircleRenderer.Init() on each platform!</summary>
@@ -32,21 +32,21 @@
        </group>
        <group targetFramework="netstandard2.0">
          <dependency id="NETStandard.Library" version="2.0.1" />
-         <dependency id="Xamarin.Forms" version="2.5.0.280555"/>
+         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
        </group>
        <group targetFramework="MonoAndroid10">
-         <dependency id="Xamarin.Forms" version="2.5.0.280555"/>
+         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
        </group>
        <group targetFramework="Xamarin.iOS10">
-         <dependency id="Xamarin.Forms" version="2.5.0.280555"/>
+         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
        </group>
        <group targetFramework="Xamarin.Mac20">
        </group>
        <group targetFramework="portable-net45+win+wpa81+wp80">
-         <dependency id="Xamarin.Forms" version="2.5.0.280555"/>
+         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
        </group>
        <group targetFramework="uap">
-         <dependency id="Xamarin.Forms" version="2.5.0.280555"/>
+         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
        </group>
        <group targetFramework="dotnet">
        </group>

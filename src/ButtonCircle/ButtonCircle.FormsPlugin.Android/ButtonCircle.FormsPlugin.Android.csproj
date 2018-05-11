@@ -105,8 +105,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\materialicons.ttf" />
-    <AndroidAsset Include="Assets\fontawesome.ttf" />
+    <AndroidAsset Include="Assets\materialicons.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\fontawesome.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>  
+    </AndroidAsset>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
