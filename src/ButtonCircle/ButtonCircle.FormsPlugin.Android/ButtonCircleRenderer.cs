@@ -23,7 +23,7 @@ namespace ButtonCircle.FormsPlugin.Droid
     [Preserve(AllMembers = true)]
     public class ButtonCircleRenderer : ButtonRenderer
     {
-       
+
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
@@ -51,7 +51,7 @@ namespace ButtonCircle.FormsPlugin.Droid
             {
                 Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets,
                     Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon));
-                
+
                 IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
                     ((CircleButton)Element).FontIcon);
 
@@ -60,7 +60,7 @@ namespace ButtonCircle.FormsPlugin.Droid
             else
             {
                 Control.Typeface = Typeface.Create(Element.FontFamily, TypefaceStyle.Normal);
-                Element.Text = ((CircleButton)Element).Text;                
+                Element.Text = ((CircleButton)Element).Text;
             }
 
             if (((CircleButton)Element).Image != null)
@@ -88,8 +88,8 @@ namespace ButtonCircle.FormsPlugin.Droid
             if (e.PropertyName == CircleButton.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleButton.BorderThicknessProperty.PropertyName ||
               e.PropertyName == CircleButton.IconProperty.PropertyName ||
-              e.PropertyName == CircleButton.TextProperty.PropertyName || 
-              e.PropertyName == CircleButton.FontIconProperty.PropertyName )
+              e.PropertyName == CircleButton.TextProperty.PropertyName ||
+              e.PropertyName == CircleButton.FontIconProperty.PropertyName)
             {
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
