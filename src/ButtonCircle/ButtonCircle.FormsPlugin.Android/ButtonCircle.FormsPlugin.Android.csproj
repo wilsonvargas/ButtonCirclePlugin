@@ -109,8 +109,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Assets\fontawesome.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>  
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
+    <AndroidAsset Include="Assets\ionicons.ttf" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
