@@ -9,6 +9,7 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Enums
     public enum Fonts
     {
         FontAwesome,
-        Material
+        Material,
+        Ionicons
     }
 }
