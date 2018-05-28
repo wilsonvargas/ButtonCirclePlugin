@@ -1,11 +1,10 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions.Enums;
 using ButtonCircle.FormsPlugin.Abstractions.FontAwesome;
+using ButtonCircle.FormsPlugin.Abstractions.Ionicons;
 using ButtonCircle.FormsPlugin.Abstractions.Material;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
 {
@@ -38,13 +37,12 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return FontAwesomeCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
-                    break;
                 case Fonts.Material:
                     return MaterialCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
-                    break;
+                case Fonts.Ionicons:
+                    return IoniconsCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
                 default:
                     return null;
-                    break;
             }
 
         }
@@ -61,13 +59,12 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return "FontAwesome";
-                    break;
                 case Fonts.Material:
                     return "MaterialIcons-Regular";
-                    break;
+                case Fonts.Ionicons:
+                    return "Ionicons";
                 default:
                     return string.Empty;
-                    break;
             }
         }
 
@@ -82,13 +79,12 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return "fontawesome.ttf";
-                    break;
                 case Fonts.Material:
                     return "materialicons.ttf";
-                    break;
+                case Fonts.Ionicons:
+                    return "ionicons.ttf";
                 default:
                     return string.Empty;
-                    break;
             }
         }
 
@@ -104,13 +100,12 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return "/Assets/Fonts/fontawesome.ttf#FontAwesome";
-                    break;
                 case Fonts.Material:
                     return "/Assets/Fonts/materialicons.ttf#Material Icons";
-                    break;
+                case Fonts.Ionicons:
+                    return "/Assets/Fonts/ionicons.ttf";
                 default:
                     return string.Empty;
-                    break;
             }
 
         }
