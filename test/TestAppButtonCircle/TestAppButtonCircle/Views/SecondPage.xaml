@@ -7,8 +7,8 @@
         <StackLayout Orientation="Vertical" HorizontalOptions="Center">
             <controls:CircleButton Icon="md-keyboard-backspace" FontSize="25" TextColor="White" HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BorderColor="White" BorderThickness="3" BackgroundColor="#78C0A8" Command="{Binding GoBackCommand}"/>
-            <Label Text="I'm use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black"/>
+                            BorderColor="White" BorderThickness="3" BackgroundColor="#78C0A8" Command="{Binding GoBackCommand}" />
+            <Label Text="I'm use a border thickness" HorizontalTextAlignment="Center" FontSize="Micro" TextColor="Black" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,25 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace TestAppButtonCircle.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
-        string title = string.Empty;
-
         /// <summary>
-        /// Gets or sets the title.
+        /// Occurs when property changed.
         /// </summary>
-        /// <value>The title.</value>
-        public string Title
-        {
-            get { return title; }
-            set { SetProperty(ref title, value); }
-        }
-
-        string icon = string.Empty;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets or sets the icon.
@@ -31,8 +21,6 @@ namespace TestAppButtonCircle.ViewModels
             get { return icon; }
             set { SetProperty(ref icon, value); }
         }
-
-        bool isBusy;
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is busy.
@@ -47,6 +35,25 @@ namespace TestAppButtonCircle.ViewModels
             }
         }
 
+        /// <summary>
+        /// Gets or sets the title.
+        /// </summary>
+        /// <value>The title.</value>
+        public string Title
+        {
+            get { return title; }
+            set { SetProperty(ref title, value); }
+        }
+
+        private string icon = string.Empty;
+        private bool isBusy;
+        private string title = string.Empty;
+
+        /// <summary>
+        /// Raises the property changed event.
+        /// </summary>
+        /// <param name="propertyName">Property name.</param>
+        protected void OnPropertyChanged([CallerMemberName]string propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
         /// Sets the property.
@@ -70,16 +77,5 @@ namespace TestAppButtonCircle.ViewModels
             OnPropertyChanged(propertyName);
             return true;
         }
-
-        /// <summary>
-        /// Occurs when property changed.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// Raises the property changed event.
-        /// </summary>
-        /// <param name="propertyName">Property name.</param>
-        protected void OnPropertyChanged([CallerMemberName]string propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
     }
 }
