@@ -2,9 +2,6 @@
 using ButtonCircle.FormsPlugin.Abstractions.FontAwesome;
 using ButtonCircle.FormsPlugin.Abstractions.Ionicons;
 using ButtonCircle.FormsPlugin.Abstractions.Material;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
 {
@@ -37,34 +34,15 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return FontAwesomeCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+
                 case Fonts.Material:
                     return MaterialCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+
                 case Fonts.Ionicons:
                     return IoniconsCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+
                 default:
                     return null;
-            }
-
-        }
-
-
-        /// <summary>
-        /// Retrieve a name of font icon.
-        /// </summary>
-        /// <param name="font">The font of icon.</param>
-        /// <returns>The name font, or empty string if no font matches the Enum Fonts</returns>
-        public static string FindNameForFont(Fonts font)
-        {
-            switch (font)
-            {
-                case Fonts.FontAwesome:
-                    return "FontAwesome";
-                case Fonts.Material:
-                    return "MaterialIcons-Regular";
-                case Fonts.Ionicons:
-                    return "Ionicons";
-                default:
-                    return string.Empty;
             }
         }
 
@@ -79,15 +57,40 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return "fontawesome.ttf";
+
                 case Fonts.Material:
                     return "materialicons.ttf";
+
                 case Fonts.Ionicons:
                     return "ionicons.ttf";
+
                 default:
                     return string.Empty;
             }
         }
 
+        /// <summary>
+        /// Retrieve a name of font icon.
+        /// </summary>
+        /// <param name="font">The font of icon.</param>
+        /// <returns>The name font, or empty string if no font matches the Enum Fonts</returns>
+        public static string FindNameForFont(Fonts font)
+        {
+            switch (font)
+            {
+                case Fonts.FontAwesome:
+                    return "FontAwesome";
+
+                case Fonts.Material:
+                    return "MaterialIcons-Regular";
+
+                case Fonts.Ionicons:
+                    return "Ionicons";
+
+                default:
+                    return string.Empty;
+            }
+        }
 
         /// <summary>
         /// Retrieve a path of font icon.
@@ -100,16 +103,16 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
             {
                 case Fonts.FontAwesome:
                     return "/Assets/Fonts/fontawesome.ttf#FontAwesome";
+
                 case Fonts.Material:
                     return "/Assets/Fonts/materialicons.ttf#Material Icons";
+
                 case Fonts.Ionicons:
                     return "/Assets/Fonts/ionicons.ttf";
+
                 default:
                     return string.Empty;
             }
-
         }
-
-
     }
 }

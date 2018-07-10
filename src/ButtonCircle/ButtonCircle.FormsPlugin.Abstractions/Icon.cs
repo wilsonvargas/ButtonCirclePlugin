@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ButtonCircle.FormsPlugin.Abstractions
+﻿namespace ButtonCircle.FormsPlugin.Abstractions
 {
     /// <summary>
     /// Defines the <see cref="Icon" /> type.
@@ -12,16 +6,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions
     /// <seealso cref="IIcon" />
     public class Icon : IIcon
     {
-        /// <summary>
-        /// The character matching the key in the font, for example '\u4354'
-        /// </summary>
-        public Char Character { get; private set; }
-
-        /// <summary>
-        /// The key of icon, for example 'fa-ok'
-        /// </summary>
-        public String Key { get; private set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Icon" /> class.
         /// </summary>
@@ -32,5 +16,15 @@ namespace ButtonCircle.FormsPlugin.Abstractions
             Character = character;
             Key = key;
         }
+
+        /// <summary>
+        /// The character matching the key in the font, for example '\u4354'
+        /// </summary>
+        public Char Character { get; private set; }
+
+        /// <summary>
+        /// The key of icon, for example 'fa-ok'
+        /// </summary>
+        public String Key { get; private set; }
     }
 }

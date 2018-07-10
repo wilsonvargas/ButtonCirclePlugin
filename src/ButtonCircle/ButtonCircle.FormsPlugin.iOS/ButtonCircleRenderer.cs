@@ -1,16 +1,17 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions;
-using System;
-using Xamarin.Forms;
 using ButtonCircle.FormsPlugin.iOS;
-using Xamarin.Forms.Platform.iOS;
-using Foundation;
-using System.ComponentModel;
 using CoreAnimation;
 using CoreGraphics;
+using Foundation;
+using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using UIKit;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(ButtonCircle.FormsPlugin.Abstractions.CircleButton), typeof(ButtonCircleRenderer))]
+
 namespace ButtonCircle.FormsPlugin.iOS
 {
     /// <summary>
@@ -28,7 +29,7 @@ namespace ButtonCircle.FormsPlugin.iOS
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
@@ -45,7 +46,7 @@ namespace ButtonCircle.FormsPlugin.iOS
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
@@ -57,7 +58,6 @@ namespace ButtonCircle.FormsPlugin.iOS
             CreateCircle();
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-
                 Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
                         (((CircleButton)Element).FontIcon), (nfloat)Element.FontSize);
 
@@ -67,7 +67,6 @@ namespace ButtonCircle.FormsPlugin.iOS
                 Control.SetTitle($"{icon.Character}", UIControlState.Normal);
                 //Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                 //Element.Text = ((CircleButton)Element).Icon;
-
             }
             else
             {
@@ -91,8 +90,9 @@ namespace ButtonCircle.FormsPlugin.iOS
                 };
             }
         }
+
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -109,19 +109,17 @@ namespace ButtonCircle.FormsPlugin.iOS
               e.PropertyName == CircleButton.TextProperty.PropertyName ||
               e.PropertyName == CircleButton.FontIconProperty.PropertyName)
             {
-
                 CreateCircle();
 
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
                     Control.Font = UIFont.FromName(Abstractions.Helpers.Extensions.FindNameForFont
-                        (((CircleButton)Element).FontIcon),(nfloat)Element.FontSize);
+                        (((CircleButton)Element).FontIcon), (nfloat)Element.FontSize);
 
                     IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
                        ((CircleButton)Element).FontIcon);
 
                     Control.SetTitle($"{icon.Character}", UIControlState.Normal);
-
 
                     //Control.Font = Font.OfSize("MaterialIcons-Regular", Element.FontSize).WithAttributes(Element.FontAttributes).ToUIFont();
                     //Element.Text = ((CircleButton)Element).Icon;

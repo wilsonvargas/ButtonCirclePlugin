@@ -1,22 +1,9 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ButtonCircle.FormsPlugin.Abstractions.FontAwesome
 {
     public static class FontAwesomeCollection
     {
-        /// <summary>
-        /// Gets the icons.
-        /// </summary>
-        /// <value>
-        /// The icons.
-        /// </value>
-        public static IList<IIcon> Icons { get; } = new List<IIcon>();
-
         /// <summary>
         /// Initializes the <see cref="FontAwesomeCollection" /> class.
         /// </summary>
@@ -809,5 +796,13 @@ namespace ButtonCircle.FormsPlugin.Abstractions.FontAwesome
             Icons.Add("fa-youtube-play", '\uf16a');
             Icons.Add("fa-youtube-square", '\uf166');
         }
+
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
+        public static IList<IIcon> Icons { get; } = new List<IIcon>();
     }
 }

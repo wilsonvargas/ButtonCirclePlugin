@@ -1,9 +1,4 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ButtonCircle.FormsPlugin.Abstractions.Material
 {
@@ -12,12 +7,6 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Material
     /// </summary>
     public static class MaterialCollection
     {
-        /// <summary>
-        /// Gets the icons.
-        /// </summary>
-        /// <value>The icons.</value>
-        public static IList<IIcon> Icons { get; } = new List<IIcon>();
-
         /// <summary>
         /// Initializes the <see cref="MaterialCollection" /> class.
         /// </summary>
@@ -956,5 +945,11 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Material
             Icons.Add("md-zoom-out", '\ue900');
             Icons.Add("md-zoom-out-map", '\ue56b');
         }
+
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>The icons.</value>
+        public static IList<IIcon> Icons { get; } = new List<IIcon>();
     }
 }

@@ -28,6 +28,5 @@
   <Library Name="Control1.FormsPlugin.UWP">
 
   	<!-- add directives for your library here -->
-
   </Library>
 </Directives>

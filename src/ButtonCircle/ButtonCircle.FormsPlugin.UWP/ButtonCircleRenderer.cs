@@ -1,14 +1,12 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions;
+using ButtonCircle.FormsPlugin.UWP;
 using System;
+using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
-using Windows.UI.Xaml.Shapes;
-using Windows.UI.Xaml.Media;
-using ButtonCircle.FormsPlugin.UWP;
-using Windows.UI.Xaml.Markup;
-using System.Diagnostics;
 
 [assembly: ExportRenderer(typeof(CircleButton), typeof(ButtonCircleRenderer))]
+
 namespace ButtonCircle.FormsPlugin.UWP
 {
     /// <summary>
@@ -49,8 +47,9 @@ namespace ButtonCircle.FormsPlugin.UWP
                 }
             }
         }
+
         /// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

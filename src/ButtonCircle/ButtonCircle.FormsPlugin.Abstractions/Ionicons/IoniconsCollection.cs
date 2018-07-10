@@ -1,18 +1,9 @@
-﻿using System.Collections.Generic;
-using ButtonCircle.FormsPlugin.Abstractions.Helpers;
+﻿using ButtonCircle.FormsPlugin.Abstractions.Helpers;
 
 namespace ButtonCircle.FormsPlugin.Abstractions.Ionicons
 {
     public static class IoniconsCollection
     {
-        /// <summary>
-        /// Gets the icons.
-        /// </summary>
-        /// <value>
-        /// The icons.
-        /// </value>
-        public static IList<IIcon> Icons { get; } = new List<IIcon>();
-
         /// <summary>
         /// Initializes the <see cref="IoniconsCollection" /> class.
         /// </summary>
@@ -752,5 +743,13 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Ionicons
             Icons.Add("ion-wrench", '\uf2ba');
             Icons.Add("ion-xbox", '\uf30c');
         }
+
+        /// <summary>
+        /// Gets the icons.
+        /// </summary>
+        /// <value>
+        /// The icons.
+        /// </value>
+        public static IList<IIcon> Icons { get; } = new List<IIcon>();
     }
 }
