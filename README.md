@@ -8,7 +8,7 @@ Simple but elegant way of display circle buttons with an icon in your Xamarin.Fo
 
 #### Setup
 * Available on NuGet: [Plugins.Forms.ButtonCircle](https://www.nuget.org/packages/Plugins.Forms.ButtonCircle/)
-* Install into your PCL project and Client projects.
+* Install into your PCL or .NET Standard project and Client projects.
 
 ### Android
 
@@ -51,25 +51,25 @@ In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 ```
 Assets/Fonts
 ```
-
-Also call Init method:
-
-```
-ButtonCircleRenderer.Init();
-```
-
 You can download this file here:
 
 [Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
 
 [FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
 
+Also call Init method:
+
+```
+ButtonCircleRenderer.Init();
+```
+You must do this AFTER you call Xamarin.Forms.Init();
+
+Note: On UWP, the button's fill color on hover will be a lighter shade of the background color set on the CircleButton, unless it is transparent (which will be the assumed default if no BackgroundColor is explicitly set) in which case the BorderColor will be used.
+
 <img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
 data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png"
  width="310" height="510" />
 
-
-You must do this AFTER you call Xamarin.Forms.Init();
 
 **Platform Support**
 
@@ -101,7 +101,7 @@ new ButtonImage
   WidthRequest = 150,
   HorizontalOptions = LayoutOptions.Center,
   FontIcon = Fonts.Material
-  Icon = "md-ic-add"
+  Icon = "md-add"
 }
 ```
 
@@ -117,13 +117,15 @@ Then add the xaml:
 ```xml
 <local:CircleButton 
         FontIcon="Material"
-        Icon="md-ic-directions-bike" 
+        Icon="md-directions-bike" 
         FontSize="30" TextColor="Black" 
         HeightRequest="70" WidthRequest="70" 
         BorderThickness="5" BorderColor="Black" 
-        BackgroundColor="#DCDCDC" Clicked="CircleButton_Clicked">
+        BackgroundColor="#DCDCDC">
 </local:CircleButton>
 ```
+
+If you see the replacement character (�) appear instead of the desired icon, make sure that you have followed the setup instructions above and that you have supplied the correct text key for the "Icon" property.
 
 #### License
 Licensed under MIT, see license file
