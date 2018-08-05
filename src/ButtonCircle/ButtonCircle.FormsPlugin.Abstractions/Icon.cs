@@ -1,4 +1,6 @@
-﻿namespace ButtonCircle.FormsPlugin.Abstractions
+﻿using System;
+
+namespace ButtonCircle.FormsPlugin.Abstractions
 {
     /// <summary>
     /// Defines the <see cref="Icon" /> type.
