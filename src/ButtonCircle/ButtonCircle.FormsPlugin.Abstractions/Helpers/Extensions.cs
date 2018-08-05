@@ -14,6 +14,11 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
     public static class Extensions
     {
         /// <summary>
+        /// The default icon to be displayed when the user-supplied icon key is not found
+        /// </summary>
+        public static Icon DefaultIcon => new Icon("default", '\ufffd'); // https://en.wikipedia.org/wiki/Specials_%28Unicode_block%29#Replacement_character
+
+        /// <summary>
         /// Adds the icon to the list.
         /// </summary>
         /// <param name="list">The list.</param>
@@ -31,21 +36,21 @@ namespace ButtonCircle.FormsPlugin.Abstractions.Helpers
         {
             if (String.IsNullOrWhiteSpace(iconKey))
             {
-                return null;
+                return DefaultIcon;
             }
             switch (font)
             {
                 case Fonts.FontAwesome:
-                    return FontAwesomeCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+                    return FontAwesomeCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey)) ?? DefaultIcon;
 
                 case Fonts.Material:
-                    return MaterialCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+                    return MaterialCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey)) ?? DefaultIcon;
 
                 case Fonts.Ionicons:
-                    return IoniconsCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey));
+                    return IoniconsCollection.Icons.FirstOrDefault(x => x.Key.Contains(iconKey)) ?? DefaultIcon;
 
                 default:
-                    return null;
+                    return DefaultIcon;
             }
         }
 
