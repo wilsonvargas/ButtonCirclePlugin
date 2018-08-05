@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="2.8.1">
     <id>Plugins.Forms.ButtonCircle</id>
-    <version>2.0.2.1</version>
+    <version>2.0.3</version>
     <title>Button Circle Control Plugin for Xamarin.Forms</title>
     <authors>Wilson Vargas</authors>
     <owners>Wilson Vargas</owners>
@@ -14,7 +14,7 @@
           Custom control for your Xamarin.Forms project ot turn your buttons into elegant circle buttons with an icon.
          Customizable border thickness and color.
          Ensure you call ButtonCircleRenderer.Init() on each platform!
-          Built against: 2.5.1.444934
+          Built against: 3.1.0.697729
 </description>
 <copyright>Copyright ©2017</copyright>
     <summary>Use a Circle Button Icon in your Xamarin.Forms projects! Ensure you call ButtonCircleRenderer.Init() on each platform!</summary>
@@ -31,22 +31,22 @@
        <group targetFramework="wpa">
        </group>
        <group targetFramework="netstandard2.0">
-         <dependency id="NETStandard.Library" version="2.0.1" />
-         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
+         <dependency id="NETStandard.Library" version="2.0.3" />
+         <dependency id="Xamarin.Forms" version="3.1.0.697729"/>
        </group>
        <group targetFramework="MonoAndroid10">
-         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
+         <dependency id="Xamarin.Forms" version="3.1.0.697729"/>
        </group>
        <group targetFramework="Xamarin.iOS10">
-         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
+         <dependency id="Xamarin.Forms" version="3.1.0.697729"/>
        </group>
        <group targetFramework="Xamarin.Mac20">
        </group>
        <group targetFramework="portable-net45+win+wpa81+wp80">
-         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
+         <dependency id="Xamarin.Forms" version="3.1.0.697729"/>
        </group>
        <group targetFramework="uap">
-         <dependency id="Xamarin.Forms" version="2.5.1.444934"/>
+         <dependency id="Xamarin.Forms" version="3.1.0.697729"/>
        </group>
        <group targetFramework="dotnet">
        </group>
