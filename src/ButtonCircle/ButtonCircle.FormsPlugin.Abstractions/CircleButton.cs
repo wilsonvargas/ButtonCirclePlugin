@@ -1,4 +1,5 @@
 ﻿using ButtonCircle.FormsPlugin.Abstractions.Enums;
+using Xamarin.Forms;
 
 namespace ButtonCircle.FormsPlugin.Abstractions
 {

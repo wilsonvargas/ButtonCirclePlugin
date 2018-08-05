@@ -1,4 +1,7 @@
-﻿using ButtonCircle.FormsPlugin.Abstractions.Enums;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using ButtonCircle.FormsPlugin.Abstractions.Enums;
 using ButtonCircle.FormsPlugin.Abstractions.FontAwesome;
 using ButtonCircle.FormsPlugin.Abstractions.Ionicons;
 using ButtonCircle.FormsPlugin.Abstractions.Material;
