@@ -29,6 +29,17 @@ In your iOS project call:
 ButtonCircleRenderer.Init();
 ```
 
+In your iOS project add materialicons.ttf and fontawesome.ttf files to:
+
+```
+Resources
+```
+You can download the files here:
+
+[Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
+
+[FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
+
 And add this key in your Info.plist
 
 ```
@@ -51,7 +62,7 @@ In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 ```
 Assets/Fonts
 ```
-You can download this file here:
+You can download the files here:
 
 [Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
 
