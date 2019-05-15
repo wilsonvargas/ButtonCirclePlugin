@@ -69,9 +69,7 @@ You must do this AFTER you call Xamarin.Forms.Init();
 
 > **Note:** On UWP, the button's fill color on hover will be a lighter shade of the background color set on the CircleButton, unless it is transparent (which will be the assumed default if no BackgroundColor is explicitly set) in which case the BorderColor will be used.
 
-<img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
-data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png"
- width="310" height="510" />
+![Image](https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png)
 
 
 **Platform Support**
