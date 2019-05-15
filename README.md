@@ -57,6 +57,8 @@ You can download this file here:
 
 [FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
 
+[Ionic](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/ionicons.ttf)
+
 Also call Init method:
 
 ```
