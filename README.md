@@ -36,6 +36,7 @@ And add this key in your Info.plist
     <array>
       <string>materialicons.ttf</string>
       <string>fontawesome.ttf</string>
+      <string>ionicons.ttf</string>
     </array>
 ```
 
