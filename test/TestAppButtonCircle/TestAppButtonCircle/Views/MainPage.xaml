@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
-             x:Class="TestAppButtonCircle.Views.MainPage">
+             x:Class="TestAppButtonCircle.Views.MainPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -34,9 +35,13 @@
             </StackLayout>
 
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                <controls:CircleButton Image="icon1.png" HorizontalOptions="Center"
+                <controls:CircleButton HorizontalOptions="Center"
                             HeightRequest="50" WidthRequest="50" BorderRadius="50"
-                            BackgroundColor="#3598DB" Command="{Binding DisplayAlertCommand}" />
+                            BackgroundColor="#3598DB" Command="{Binding DisplayAlertCommand}" >
+                    <controls:CircleButton.Image>
+                        <OnPlatform x:TypeArguments="FileImageSource" Android="icon1.png" iOS="icon1.png" WinPhone="Assets/icon1.png"/>
+                    </controls:CircleButton.Image>
+                </controls:CircleButton>
                 <Label Text="Button with image" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black" />
             </StackLayout>
         </Grid>

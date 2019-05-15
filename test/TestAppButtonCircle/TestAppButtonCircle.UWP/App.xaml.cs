@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ButtonCircle.FormsPlugin.UWP;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -39,7 +40,7 @@ namespace TestAppButtonCircle.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-
+                ButtonCircleRenderer.Init();
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
