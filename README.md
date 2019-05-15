@@ -36,6 +36,7 @@ And add this key in your Info.plist
     <array>
       <string>materialicons.ttf</string>
       <string>fontawesome.ttf</string>
+      <string>ionicons.ttf</string>
     </array>
 ```
 
@@ -57,6 +58,8 @@ You can download this file here:
 
 [FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
 
+[Ionic](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/ionicons.ttf)
+
 Also call Init method:
 
 ```
@@ -77,10 +80,7 @@ data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCircleP
 | ------------------- | :-----------: | :------------------: |
 |Xamarin.iOS|Yes|iOS 7+|
 |Xamarin.Android|Yes|API 14+|
-|Windows Phone Silverlight|No|
-|Windows Phone RT|No|
-|Windows Store RT|Yes(beta)|8.1+ 
-|Windows 10 UWP|Yes (beta)|Build 105086+
+|Windows 10 UWP|Yes|Build 105086+
 |Xamarin.Mac|No||
 
 #### List of icons
