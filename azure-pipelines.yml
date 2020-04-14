@@ -10,9 +10,14 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
+  majorVersion: 2
+  minorVersion: 0
+  patchVersion: $[counter(variables['build.sourcebranchname'], 0)]
+  NugetPackageVersion: $(majorVersion).$(minorVersion).$(patchVersion)
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  projectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/ButtonCircle.FormsPlugin.Abstractions.csproj'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -21,14 +26,8 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
+  displayName: Build project
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: '$(projectPath)'
