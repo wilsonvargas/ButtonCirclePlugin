@@ -17,7 +17,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  projectPath: 'src/Screenshot/Screenshot.csproj'
+  sharedProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/.csproj'
+  androidProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Android/.csproj'
+  iosProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.iOS/.csproj'
+  uwpProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/.csproj'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -27,28 +30,35 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: MSBuild@1
-  displayName: Build Solution
+  displayName: Build Shared Project
   inputs:
-    solution: $(projectPath)
+    solution: $(sharedProjectPath)
     configuration: $(buildConfiguration)
     msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
 
-- task: DotNetCoreCLI@2
-  displayName: Build Sample
+- task: XamarinAndroid@1
+  displayName: Build Android Project
   inputs:
-    command: 'build'
-    projects: 'sample/Sample/Sample.csproj'
+    projectFile: '$(androidProjectPath)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+    jdkOption: 'JDKVersion'
+
+- task: XamariniOS@2
+  displayName: Build iOS Project
+  inputs:
+    solutionFile: '$(iosProjectPath)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+    packageApp: true
+    runNugetRestore: false
 
 - task: MSBuild@1
-  displayName: Pack NuGets
+  displayName: Build UWP Project
   inputs:
-    solution: $(projectPath)
-    configuration: 'Release'
-    msbuildArguments: '/t:Pack /p:PackageVersion=$(NugetPackageVersion) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+    solution: $(uwpProjectPath)
+    configuration: $(buildConfiguration)
+    msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish the package'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: 'drop'
-    publishLocation: 'Container'
+
+
