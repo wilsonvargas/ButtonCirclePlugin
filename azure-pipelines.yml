@@ -6,8 +6,15 @@
 trigger:
 - master
 
+strategy:
+  matrix:
+    mac:
+      imageName: 'macos-latest'
+    windows:
+      imageName: 'windows-latest'
+
 pool:
-  vmImage: 'windows-latest'
+  vmImage: $(imageName)
 
 variables:
   majorVersion: 2
