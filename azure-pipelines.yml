@@ -42,6 +42,7 @@ steps:
     projectFile: '$(androidProjectPath)'
     configuration: '$(buildConfiguration)'
     clean: true
+    msbuildVersionOption: 'latest'
     jdkOption: 'JDKVersion'
 
 - task: XamariniOS@2
