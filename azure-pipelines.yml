@@ -1,0 +1,65 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  majorVersion: 2
+  minorVersion: 0
+  patchVersion: $[counter(variables['build.sourcebranchname'], 0)]
+  NugetPackageVersion: $(majorVersion).$(minorVersion).$(patchVersion)
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  sharedProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/ButtonCircle.FormsPlugin.Abstractions.csproj'
+  androidProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Android/ButtonCircle.FormsPlugin.Android.csproj'
+  iosProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.iOS/ButtonCircle.FormsPlugin.iOS.csproj'
+  uwpProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/ButtonCircle.FormsPlugin.UWP.csproj'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: MSBuild@1
+  displayName: Build Shared Project
+  inputs:
+    solution: $(sharedProjectPath)
+    configuration: $(buildConfiguration)
+    msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
+
+- task: XamarinAndroid@1
+  displayName: Build Android Project
+  inputs:
+    projectFile: '$(androidProjectPath)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+    msbuildVersionOption: 'latest'
+    jdkOption: 'JDKVersion'
+
+- task: XamariniOS@2
+  displayName: Build iOS Project
+  inputs:
+    solutionFile: '$(iosProjectPath)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+    packageApp: true
+    runNugetRestore: false
+
+- task: MSBuild@1
+  displayName: Build UWP Project
+  inputs:
+    solution: $(uwpProjectPath)
+    configuration: $(buildConfiguration)
+    msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
+
+
+

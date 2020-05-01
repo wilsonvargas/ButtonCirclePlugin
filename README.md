@@ -29,6 +29,17 @@ In your iOS project call:
 ButtonCircleRenderer.Init();
 ```
 
+In your iOS project add materialicons.ttf and fontawesome.ttf files to:
+
+```
+Resources
+```
+You can download the files here:
+
+[Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
+
+[FontAwesome](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/fontawesome.ttf)
+
 And add this key in your Info.plist
 
 ```
@@ -52,7 +63,7 @@ In your UWP project add materialicons.ttf and fontawesome.ttf files to:
 ```
 Assets/Fonts
 ```
-You can download this file here:
+You can download the files here:
 
 [Material Design icons](https://github.com/wilsonvargas/ButtonCirclePlugin/blob/master/src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/Assets/Fonts/materialicons.ttf)
 
@@ -69,9 +80,7 @@ You must do this AFTER you call Xamarin.Forms.Init();
 
 > **Note:** On UWP, the button's fill color on hover will be a lighter shade of the background color set on the CircleButton, unless it is transparent (which will be the assumed default if no BackgroundColor is explicitly set) in which case the BorderColor will be used.
 
-<img src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png" 
-data-canonical-src="https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png"
- width="310" height="510" />
+![Image](https://raw.githubusercontent.com/wilsonvargas/ButtonCirclePlugin/master/images/screenshots/windows.png)
 
 
 **Platform Support**
