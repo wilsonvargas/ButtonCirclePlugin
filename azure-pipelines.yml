@@ -17,7 +17,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  projectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/ButtonCircle.FormsPlugin.Abstractions.csproj'
+  projectPath: 'src/Screenshot/Screenshot.csproj'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -26,8 +26,29 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: MSBuild@1
+  displayName: Build Solution
+  inputs:
+    solution: $(projectPath)
+    configuration: $(buildConfiguration)
+    msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
+
 - task: DotNetCoreCLI@2
-  displayName: Build project
+  displayName: Build Sample
   inputs:
     command: 'build'
-    projects: '$(projectPath)'
+    projects: 'sample/Sample/Sample.csproj'
+
+- task: MSBuild@1
+  displayName: Pack NuGets
+  inputs:
+    solution: $(projectPath)
+    configuration: 'Release'
+    msbuildArguments: '/t:Pack /p:PackageVersion=$(NugetPackageVersion) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish the package'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
+    publishLocation: 'Container'
