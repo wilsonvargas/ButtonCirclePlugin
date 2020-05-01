@@ -17,10 +17,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  sharedProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/.csproj'
-  androidProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Android/.csproj'
-  iosProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.iOS/.csproj'
-  uwpProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/.csproj'
+  sharedProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Abstractions/ButtonCircle.FormsPlugin.Abstractions.csproj'
+  androidProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.Android/ButtonCircle.FormsPlugin.Android.csproj'
+  iosProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.iOS/ButtonCircle.FormsPlugin.iOS.csproj'
+  uwpProjectPath: 'src/ButtonCircle/ButtonCircle.FormsPlugin.UWP/ButtonCircle.FormsPlugin.UWP.csproj'
 
 steps:
 - task: NuGetToolInstaller@1
