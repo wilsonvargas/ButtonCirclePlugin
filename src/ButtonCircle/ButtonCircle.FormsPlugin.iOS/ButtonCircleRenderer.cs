@@ -23,7 +23,7 @@ namespace ButtonCircle.FormsPlugin.iOS
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
-        public async static void Init()
+        new public static void Init()
         {
             var temp = DateTime.Now;
         }
@@ -77,7 +77,7 @@ namespace ButtonCircle.FormsPlugin.iOS
                 Control.SetTitle(((CircleButton)Element).Text, UIControlState.Normal);
             }
 
-            if (((CircleButton)Element).Image != null)
+            if (((CircleButton)Element).ImageSource != null)
             {
                 UIButton thisButton = Control as UIButton;
                 thisButton.TouchDown += delegate

@@ -1,3 +1,4 @@
+using Android.Content;
 using Android.Graphics;
 using Android.Runtime;
 using Android.Views;
@@ -18,10 +19,14 @@ namespace ButtonCircle.FormsPlugin.Droid
     [Preserve(AllMembers = true)]
     public class ButtonCircleRenderer : ButtonRenderer
     {
+
+        public ButtonCircleRenderer(Context context) : base(context)
+        {
+        }
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
-        public async static void Init()
+        public static void Init()
         {
             var temp = DateTime.Now;
         }
@@ -45,7 +50,7 @@ namespace ButtonCircle.FormsPlugin.Droid
 
                 if (borderThickness > 0)
                 {
-                    var logicalDensity = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics.Density;
+                    var logicalDensity = Context.Resources.DisplayMetrics.Density;
                     strokeWidth = (int)Math.Ceiling(borderThickness * logicalDensity + .5f);
                 }
 
@@ -111,7 +116,7 @@ namespace ButtonCircle.FormsPlugin.Droid
 
             if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
             {
-                Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets,
+                Control.Typeface = Typeface.CreateFromAsset(Context.Assets,
                     Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon));
 
                 IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
@@ -125,7 +130,7 @@ namespace ButtonCircle.FormsPlugin.Droid
                 Element.Text = ((CircleButton)Element).Text;
             }
 
-            if (((CircleButton)Element).Image != null)
+            if (((CircleButton)Element).ImageSource != null)
             {
                 Android.Widget.Button thisButton = Control as Android.Widget.Button;
                 thisButton.Touch += (object sender, Android.Views.View.TouchEventArgs e2) =>
@@ -156,7 +161,7 @@ namespace ButtonCircle.FormsPlugin.Droid
             {
                 if (!String.IsNullOrEmpty(((CircleButton)Element).Icon))
                 {
-                    Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets,
+                    Control.Typeface = Typeface.CreateFromAsset(Context.Assets,
                     Abstractions.Helpers.Extensions.FindNameFileForFont(((CircleButton)Element).FontIcon));
 
                     IIcon icon = Abstractions.Helpers.Extensions.FindIconForKey(((CircleButton)Element).Icon,
